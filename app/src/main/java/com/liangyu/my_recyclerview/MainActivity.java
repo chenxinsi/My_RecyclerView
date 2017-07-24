@@ -28,6 +28,9 @@ public class MainActivity extends AppCompatActivity implements MyAdapter.OnRecyc
         //创建并设置Adapter
         MyAdapter mAdapter = new MyAdapter(new String[]{"123","456","789","098"});
         myRecyclerView.setAdapter(mAdapter);
+
+        //这句就是添加我们自定义的分隔线
+        myRecyclerView.addItemDecoration(new MyDecoration(this, MyDecoration.HORIZONTAL_LIST));
         mAdapter.setOnItemClickListener(this);
     }
 
